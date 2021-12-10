@@ -1,12 +1,15 @@
 import http from 'http';
 import express from 'express';
 import util from 'util';
-
+import router from './router.js';
+import morgan from 'morgan';
 
 class App {
   constructor() {
     this.log = util.debuglog(this.constructor.name);
     this.express = express();
+    this.express.use(morgan('combined'));
+    this.express.use(router);
 
     this.server = http.createServer(this.express);
     this.log('.constructor, ready!');
@@ -26,7 +29,6 @@ class App {
     this.log('.stop, terminated app');
   }
 }
-
 
 const app = new App();
 app.start();
