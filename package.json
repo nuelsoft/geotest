@@ -1,0 +1,27 @@
+{
+  "name": "geotest",
+  "version": "1.0.0",
+  "description": "Coding exercise",
+  "main": "app.js",
+  "scripts": {
+    "watch": "nodemon",
+    "start": "NODE_DEBUG=App node app.js",
+    "test": "jest",
+    "push": "npm test && git add . && git commit && git push origin HEAD"
+  },
+  "type": "module",
+  "keywords": [],
+  "repository": "https://github.com/nuelsoft/geotest",
+  "author": "Emmanuel Sunday <nuel.mailbox@gmail.com>",
+  "license": "ISC",
+  "private": "true",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.4.4"
+  }
+}
