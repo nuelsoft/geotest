@@ -2,11 +2,11 @@
   "name": "geotest",
   "version": "1.0.0",
   "description": "Coding exercise",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "watch": "nodemon",
-    "start": "NODE_DEBUG=App node app.js",
-    "test": "jest",
+    "start": "NODE_DEBUG=App node server.js",
+    "test": "jest"
   },
   "type": "module",
   "keywords": [],
