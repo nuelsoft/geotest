@@ -7,7 +7,6 @@
     "watch": "nodemon",
     "start": "NODE_DEBUG=App node app.js",
     "test": "jest",
-    "push": "npm test && git add . && git commit && git push origin HEAD"
   },
   "type": "module",
   "keywords": [],
@@ -16,6 +15,7 @@
   "license": "ISC",
   "private": "true",
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-google": "^0.14.0",
-    "jest": "^27.4.4"
+    "jest": "^27.4.4",
+    "supertest": "^6.1.6"
   }
 }

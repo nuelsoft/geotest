@@ -3,12 +3,16 @@ import express from 'express';
 import util from 'util';
 import router from './router.js';
 import morgan from 'morgan';
+import cors from 'cors';
+import path from 'path';
 
-class App {
+export default class App {
   constructor() {
     this.log = util.debuglog(this.constructor.name);
     this.express = express();
     this.express.use(morgan('combined'));
+    this.express.use(cors());
+    this.express.use(express.static(`${path.join(process.cwd())}/client`));
     this.express.use(router);
 
     this.server = http.createServer(this.express);
@@ -30,8 +34,3 @@ class App {
   }
 }
 
-const app = new App();
-app.start();
-process.on('SIGINT', () => {
-  app.stop();
-});
