@@ -37,4 +37,4 @@ The solution also exposes an API interface
 ### Get OSM GeoJSON
 - Endpoint: `/osm/get`
 - Method: `GET`
-- Query Params: `min_lon`, `min_lat`, `max_lon`, `max_at`
+- Query Params: `min_lon`, `min_lat`, `max_lon`, `max_lat`
