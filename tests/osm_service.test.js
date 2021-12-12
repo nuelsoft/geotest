@@ -1,4 +1,4 @@
-import OSMService from '../osm/service.js';
+import OSMService from '../src/osm/service.js';
 
 describe('OSM Service:u.test', () => {
   it('should successfully query osm api', async () => {
